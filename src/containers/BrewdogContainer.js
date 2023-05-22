@@ -11,9 +11,9 @@ const BrewdogContainer = () => {
   }, []);
 
   const getBrewdogData = function () {
-    fetch("https://api.punkapi.com/v2/beers/random")
-      .then((res) => res.json())
-      .then((brewdogData) => setBrewdogData(brewdogData));
+    fetch("https://api.punkapi.com/v2/beers")
+      .then(res => res.json())
+      .then(brewdogData => setBrewdogData(brewdogData));
 
   };
 
