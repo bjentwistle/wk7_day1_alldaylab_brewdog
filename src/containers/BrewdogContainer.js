@@ -28,12 +28,9 @@ const BrewdogContainer = () => {
         brewdogData={brewdogData}
         updateSelectedBeer={updateSelectedBeer}
       />
-    <main>
-        {selectedBeer ? (
-          <BeerDetail
-            beer={selectedBeer}
-          />
-        ) : null}
+    <main>{selectedBeer ?
+      <BeerDetail selectedBeer={selectedBeer}/>
+       : null}
     </main>
     </div>
   );

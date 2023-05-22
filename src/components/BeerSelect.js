@@ -11,7 +11,7 @@ const BeerSelect = (props) => {
   
     const handleOnChange = (evt) => {
       const selectedId = evt.target.value
-      const beer = props.brewdogData.find((beer) => beer.id == selectedId)
+      const beer = props.brewdogData.find((beer) => beer.id == selectedId) //string?
       props.updateSelectedBeer(beer)
     }
   
