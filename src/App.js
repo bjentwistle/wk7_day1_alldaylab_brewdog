@@ -5,6 +5,7 @@ function App() {
   return (
     <div className="App">
       <h1>BrewDog API</h1>
+      <hr></hr>
       <BrewdogContainer />
     </div>
   );

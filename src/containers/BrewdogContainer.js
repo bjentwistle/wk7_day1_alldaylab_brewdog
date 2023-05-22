@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import BeerSelect from "../components/BeerSelect";
 import BeerDetail from "../components/BeerDetails";
+import BeerImage from "../components/BeerImage";
+import "./BrewdogContainer.css"
 
 const BrewdogContainer = () => {
   const [brewdogData, setBrewdogData] = useState([]); //initial state - empty array
@@ -22,15 +24,19 @@ const BrewdogContainer = () => {
   };
 
   return (
-    <div id="app">
-      <h1>Beers</h1>
-      <BeerSelect
+    <div id="main-container">
+    <main>
+      <h3>Beers: </h3><BeerSelect
         brewdogData={brewdogData}
         updateSelectedBeer={updateSelectedBeer}
       />
+      </main>
     <main>{selectedBeer ?
       <BeerDetail selectedBeer={selectedBeer}/>
        : null}
+    </main>
+    <main> 
+    <BeerImage selectedBeer={selectedBeer}/> 
     </main>
     </div>
   );
