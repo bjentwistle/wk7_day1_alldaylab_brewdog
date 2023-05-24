@@ -1,4 +1,3 @@
-import './BeerDetails.css'
 
 const BeerImage = ({selectedBeer}) => {
     const imageSrc = selectedBeer.image_url;
