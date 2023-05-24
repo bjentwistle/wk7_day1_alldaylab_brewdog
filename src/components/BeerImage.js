@@ -2,7 +2,17 @@ import "./BeerImage.css"
 
 const BeerImage = ({selectedBeer}) => {
     const imageSrc = selectedBeer.image_url;
-    const description = selectedBeer.description;
+    const foodPairing = selectedBeer.food_pairing;
+    
+    const foodsList = foodPairing.map((food, index) => {
+      return (
+        <li name={food} key={index}>
+          {" "}
+          {food}
+        </li>
+      )
+    }); 
+
 
     return(
         <div>
@@ -11,7 +21,8 @@ const BeerImage = ({selectedBeer}) => {
             src={imageSrc}
             alt="beer bottle or keg"
             ></img>
-            <p>{description}</p>
+            <p> Food pairing suggestions: {foodsList}</p>
+            
         </div>
 
     )
