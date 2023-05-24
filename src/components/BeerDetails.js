@@ -25,7 +25,6 @@ const BeerDetail = ({selectedBeer}) => {
           <p>First Brewed in : {firstBrewed}</p>
           <p>{tagLine}</p>
           <p> Food pairing suggestions: {foodsList}</p>
-       
 
       </div>
     );

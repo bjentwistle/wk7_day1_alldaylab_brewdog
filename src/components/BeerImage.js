@@ -9,9 +9,9 @@ const BeerImage = ({selectedBeer}) => {
             id="beer-img"
             src={imageSrc}
             alt="beer image"
-                  ></img>
+            ></img>
         </div>
-      
+
     )
 
 }
