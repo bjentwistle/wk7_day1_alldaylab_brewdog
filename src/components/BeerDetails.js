@@ -1,4 +1,4 @@
-import './BeerDetails.css'
+//import './BeerDetails.css'
 
 const BeerDetail = ({selectedBeer}) => {
   //console.log("Beer details:", selectedBeer)

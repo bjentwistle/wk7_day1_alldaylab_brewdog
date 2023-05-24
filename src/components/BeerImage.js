@@ -1,3 +1,4 @@
+import "./BeerImage.css"
 
 const BeerImage = ({selectedBeer}) => {
     const imageSrc = selectedBeer.image_url;
@@ -7,7 +8,7 @@ const BeerImage = ({selectedBeer}) => {
             <img
             id="beer-img"
             src={imageSrc}
-            alt="beer image"
+            alt="beer bottle or keg"
             ></img>
         </div>
 
