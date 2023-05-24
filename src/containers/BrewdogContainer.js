@@ -5,12 +5,12 @@ import BeerImage from "../components/BeerImage";
 import "./BrewdogContainer.css";
 
 const BrewdogContainer = () => {
-  const [allBeers, setAllBeers] = useState([]); //initial state - empty array
+  const [brewdogData, setBrewdogData] = useState([]); //initial state - empty array
   const [selectedBeer, setSelectedBeer] = useState(null); //initial state - unselected
   //const [favoriteBeersIds, setFavoriteBeersIds] = useState(new Set());
 
   useEffect(() => {
-    getBeers();
+    getBrewdogData();
   }, []);
 
   const getBrewdogData = function () {
@@ -19,7 +19,7 @@ const BrewdogContainer = () => {
       .then((brewdogData) => setBrewdogData(brewdogData));
   };
 
-  const handleSelectedBeer = function (beer) {
+  const updateSelectedBeer = function (beer) {
     setSelectedBeer(beer);
   };
 
@@ -35,9 +35,9 @@ const BrewdogContainer = () => {
       <main>
         {selectedBeer ? <BeerDetail selectedBeer={selectedBeer} /> : null}
       </main>
-      <img>
+      <div id = "image-container">
         {selectedBeer ? <BeerImage selectedBeer={selectedBeer} /> : null}
-      </img>
+      </div>
     </div>
   );
 };

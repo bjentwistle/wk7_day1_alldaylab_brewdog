@@ -2,16 +2,16 @@
 
 const BeerSelect = (props) => {
 
-    const beerOptions = props.allBeers.map((beer, index) => {
+    const beerOptions = props.brewdogData.map((beer) => {
   
-      return <option label={beer.name} key={beer.index} value={beer.index}>{beer.name}</option>
+      return <option label={beer.name} key={beer.id} value={beer.id}>{beer.name}</option>
   
     })
-    console.log(props.allBeers)
+    console.log(props.brewdogData)
   
     const handleOnChange = (evt) => {
       const selectedId = evt.target.value
-      const beer = props.allBeers.find((beer) => beer.id == selectedId) //string?
+      const beer = props.brewdogData.find((beer) => beer.id == selectedId) //string?
       props.updateSelectedBeer(beer)
     }
   

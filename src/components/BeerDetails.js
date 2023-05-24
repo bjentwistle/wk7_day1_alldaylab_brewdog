@@ -1,13 +1,12 @@
 //import './BeerDetails.css'
 
 const BeerDetail = ({selectedBeer}) => {
-  //console.log("Beer details:", selectedBeer)
+  console.log("Beer details:", selectedBeer)
     const beerName = selectedBeer.name;
     const firstBrewed = selectedBeer.first_brewed;
     const tagLine = selectedBeer.tagline;
     
     const foodPairing = selectedBeer.food_pairing;
-    const description = selectedBeer.description;
     const abvPercentage = selectedBeer.abv;
 
     const foodsList = foodPairing.map((food, index) => {
@@ -17,7 +16,7 @@ const BeerDetail = ({selectedBeer}) => {
           {food}
         </li>
       )
-    })
+    });
 
     return (
       <div className="beer-detail" id="beer-detail">
@@ -25,7 +24,6 @@ const BeerDetail = ({selectedBeer}) => {
           <p>First Brewed in : {firstBrewed}</p>
           <p>{tagLine}</p>
           <p> Food pairing suggestions: {foodsList}</p>
-
       </div>
     );
   };
